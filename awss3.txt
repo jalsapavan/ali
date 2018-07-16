@@ -1,0 +1,1536 @@
+
+       __|  __|_  )
+       _|  (     /   Amazon Linux 2 AMI
+      ___|\___|___|
+
+https://aws.amazon.com/amazon-linux-2/
+No packages needed for security; 4 packages available
+Run "sudo yum update" to apply all updates.
+[ec2-user@ip-172-31-18-254 ~]$
+[ec2-user@ip-172-31-18-254 ~]$
+[ec2-user@ip-172-31-18-254 ~]$
+[ec2-user@ip-172-31-18-254 ~]$
+[ec2-user@ip-172-31-18-254 ~]$
+[ec2-user@ip-172-31-18-254 ~]$ sudo su -
+[root@ip-172-31-18-254 ~]#
+[root@ip-172-31-18-254 ~]#
+[root@ip-172-31-18-254 ~]# df -h
+Filesystem      Size  Used Avail Use% Mounted on
+devtmpfs        477M     0  477M   0% /dev
+tmpfs           494M     0  494M   0% /dev/shm
+tmpfs           494M  288K  494M   1% /run
+tmpfs           494M     0  494M   0% /sys/fs/cgroup
+/dev/xvda1      8.0G  1.1G  7.0G  14% /
+tmpfs            99M     0   99M   0% /run/user/1000
+[root@ip-172-31-18-254 ~]#
+[root@ip-172-31-18-254 ~]#
+[root@ip-172-31-18-254 ~]#
+[root@ip-172-31-18-254 ~]#
+[root@ip-172-31-18-254 ~]#
+[root@ip-172-31-18-254 ~]#
+[root@ip-172-31-18-254 ~]#
+[root@ip-172-31-18-254 ~]#
+[root@ip-172-31-18-254 ~]#
+[root@ip-172-31-18-254 ~]#
+[root@ip-172-31-18-254 ~]#
+[root@ip-172-31-18-254 ~]#
+[root@ip-172-31-18-254 ~]#
+[root@ip-172-31-18-254 ~]#
+[root@ip-172-31-18-254 ~]# clear
+[root@ip-172-31-18-254 ~]#
+[root@ip-172-31-18-254 ~]#
+[root@ip-172-31-18-254 ~]# df -h
+Filesystem      Size  Used Avail Use% Mounted on
+devtmpfs        477M     0  477M   0% /dev
+tmpfs           494M     0  494M   0% /dev/shm
+tmpfs           494M  288K  494M   1% /run
+tmpfs           494M     0  494M   0% /sys/fs/cgroup
+/dev/xvda1      8.0G  1.1G  7.0G  14% /
+tmpfs            99M     0   99M   0% /run/user/1000
+[root@ip-172-31-18-254 ~]#
+[root@ip-172-31-18-254 ~]#
+[root@ip-172-31-18-254 ~]#
+[root@ip-172-31-18-254 ~]#
+[root@ip-172-31-18-254 ~]#
+[root@ip-172-31-18-254 ~]#
+[root@ip-172-31-18-254 ~]# yum update all
+Loaded plugins: extras_suggestions, langpacks, priorities, update-motd
+amzn2-core                                                                                                                                      | 2.4 kB  00:00:00
+No Match for argument: all
+No package all available.
+No packages marked for update
+[root@ip-172-31-18-254 ~]#
+[root@ip-172-31-18-254 ~]#
+[root@ip-172-31-18-254 ~]#
+[root@ip-172-31-18-254 ~]# mkdir /demo
+[root@ip-172-31-18-254 ~]#
+[root@ip-172-31-18-254 ~]# s3fs radha-1987 /demo
+-bash: s3fs: command not found
+[root@ip-172-31-18-254 ~]#
+[root@ip-172-31-18-254 ~]# yum install s3fs
+Loaded plugins: extras_suggestions, langpacks, priorities, update-motd
+No package s3fs available.
+Error: Nothing to do
+[root@ip-172-31-18-254 ~]# yum update
+Loaded plugins: extras_suggestions, langpacks, priorities, update-motd
+Resolving Dependencies
+--> Running transaction check
+---> Package kernel.x86_64 0:4.14.51-66.38.amzn2 will be installed
+---> Package kernel-tools.x86_64 0:4.14.47-64.38.amzn2 will be updated
+---> Package kernel-tools.x86_64 0:4.14.51-66.38.amzn2 will be an update
+---> Package system-release.x86_64 1:2-3.amzn2 will be updated
+---> Package system-release.x86_64 1:2-4.amzn2 will be an update
+---> Package update-motd.noarch 0:1.1.0-1.amzn2 will be updated
+---> Package update-motd.noarch 0:1.1.1-2.amzn2 will be an update
+--> Finished Dependency Resolution
+
+Dependencies Resolved
+
+=======================================================================================================================================================================
+ Package                                  Arch                             Version                                          Repository                            Size
+=======================================================================================================================================================================
+Installing:
+ kernel                                   x86_64                           4.14.51-66.38.amzn2                              amzn2-core                            19 M
+Updating:
+ kernel-tools                             x86_64                           4.14.51-66.38.amzn2                              amzn2-core                           108 k
+ system-release                           x86_64                           1:2-4.amzn2                                      amzn2-core                            17 k
+ update-motd                              noarch                           1.1.1-2.amzn2                                    amzn2-core                           7.7 k
+
+Transaction Summary
+=======================================================================================================================================================================
+Install  1 Package
+Upgrade  3 Packages
+
+Total download size: 19 M
+Is this ok [y/d/N]: y
+Downloading packages:
+Delta RPMs disabled because /usr/bin/applydeltarpm not installed.
+(1/4): kernel-tools-4.14.51-66.38.amzn2.x86_64.rpm                                                                                              | 108 kB  00:00:00
+(2/4): system-release-2-4.amzn2.x86_64.rpm                                                                                                      |  17 kB  00:00:00
+(3/4): update-motd-1.1.1-2.amzn2.noarch.rpm                                                                                                     | 7.7 kB  00:00:00
+(4/4): kernel-4.14.51-66.38.amzn2.x86_64.rpm                                                                                                    |  19 MB  00:00:00
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Total                                                                                                                                   26 MB/s |  19 MB  00:00:00
+Running transaction check
+Running transaction test
+Transaction test succeeded
+Running transaction
+  Updating   : 1:system-release-2-4.amzn2.x86_64                                                                                                                   1/7
+  Updating   : update-motd-1.1.1-2.amzn2.noarch                                                                                                                    2/7
+  Updating   : kernel-tools-4.14.51-66.38.amzn2.x86_64                                                                                                             3/7
+  Installing : kernel-4.14.51-66.38.amzn2.x86_64                                                                                                                   4/7
+  Cleanup    : update-motd-1.1.0-1.amzn2.noarch                                                                                                                    5/7
+  Cleanup    : 1:system-release-2-3.amzn2.x86_64                                                                                                                   6/7
+  Cleanup    : kernel-tools-4.14.47-64.38.amzn2.x86_64                                                                                                             7/7
+  Verifying  : kernel-4.14.51-66.38.amzn2.x86_64                                                                                                                   1/7
+  Verifying  : 1:system-release-2-4.amzn2.x86_64                                                                                                                   2/7
+  Verifying  : kernel-tools-4.14.51-66.38.amzn2.x86_64                                                                                                             3/7
+  Verifying  : update-motd-1.1.1-2.amzn2.noarch                                                                                                                    4/7
+  Verifying  : update-motd-1.1.0-1.amzn2.noarch                                                                                                                    5/7
+  Verifying  : 1:system-release-2-3.amzn2.x86_64                                                                                                                   6/7
+  Verifying  : kernel-tools-4.14.47-64.38.amzn2.x86_64                                                                                                             7/7
+
+Installed:
+  kernel.x86_64 0:4.14.51-66.38.amzn2
+
+Updated:
+  kernel-tools.x86_64 0:4.14.51-66.38.amzn2                   system-release.x86_64 1:2-4.amzn2                   update-motd.noarch 0:1.1.1-2.amzn2
+
+Complete!
+[root@ip-172-31-18-254 ~]# yum install automake fuse fuse-devel gcc-c++ git libcurl-devel libxml2-devel make openssl-devel -y
+Loaded plugins: extras_suggestions, langpacks, priorities, update-motd
+amzn2-core                                                                                                                                      | 2.4 kB  00:00:00
+Package 1:make-3.82-23.amzn2.x86_64 already installed and latest version
+Resolving Dependencies
+--> Running transaction check
+---> Package automake.noarch 0:1.13.4-3.1.amzn2 will be installed
+--> Processing Dependency: autoconf >= 2.65 for package: automake-1.13.4-3.1.amzn2.noarch
+--> Processing Dependency: perl(Thread::Queue) for package: automake-1.13.4-3.1.amzn2.noarch
+--> Processing Dependency: perl(TAP::Parser) for package: automake-1.13.4-3.1.amzn2.noarch
+---> Package fuse.x86_64 0:2.9.2-8.amzn2 will be installed
+---> Package fuse-devel.x86_64 0:2.9.2-8.amzn2 will be installed
+--> Processing Dependency: fuse-libs = 2.9.2-8.amzn2 for package: fuse-devel-2.9.2-8.amzn2.x86_64
+--> Processing Dependency: libulockmgr.so.1()(64bit) for package: fuse-devel-2.9.2-8.amzn2.x86_64
+--> Processing Dependency: libfuse.so.2()(64bit) for package: fuse-devel-2.9.2-8.amzn2.x86_64
+---> Package gcc-c++.x86_64 0:7.3.1-5.amzn2.0.1 will be installed
+--> Processing Dependency: gcc(x86-64) = 7.3.1-5.amzn2.0.1 for package: gcc-c++-7.3.1-5.amzn2.0.1.x86_64
+--> Processing Dependency: libmpfr.so.4()(64bit) for package: gcc-c++-7.3.1-5.amzn2.0.1.x86_64
+--> Processing Dependency: libmpc.so.3()(64bit) for package: gcc-c++-7.3.1-5.amzn2.0.1.x86_64
+---> Package git.x86_64 0:2.14.4-1.amzn2 will be installed
+--> Processing Dependency: perl-Git = 2.14.4-1.amzn2 for package: git-2.14.4-1.amzn2.x86_64
+--> Processing Dependency: git-core-doc = 2.14.4-1.amzn2 for package: git-2.14.4-1.amzn2.x86_64
+--> Processing Dependency: git-core = 2.14.4-1.amzn2 for package: git-2.14.4-1.amzn2.x86_64
+--> Processing Dependency: emacs-filesystem >= 24.3 for package: git-2.14.4-1.amzn2.x86_64
+--> Processing Dependency: perl(Term::ReadKey) for package: git-2.14.4-1.amzn2.x86_64
+--> Processing Dependency: perl(Git::I18N) for package: git-2.14.4-1.amzn2.x86_64
+--> Processing Dependency: perl(Git) for package: git-2.14.4-1.amzn2.x86_64
+--> Processing Dependency: perl(Error) for package: git-2.14.4-1.amzn2.x86_64
+--> Processing Dependency: libsecret-1.so.0()(64bit) for package: git-2.14.4-1.amzn2.x86_64
+--> Processing Dependency: libpcre2-8.so.0()(64bit) for package: git-2.14.4-1.amzn2.x86_64
+---> Package libcurl-devel.x86_64 0:7.55.1-12.amzn2.0.1 will be installed
+---> Package libxml2-devel.x86_64 0:2.9.1-6.amzn2.3 will be installed
+--> Processing Dependency: zlib-devel for package: libxml2-devel-2.9.1-6.amzn2.3.x86_64
+--> Processing Dependency: xz-devel for package: libxml2-devel-2.9.1-6.amzn2.3.x86_64
+---> Package openssl-devel.x86_64 1:1.0.2k-12.amzn2.0.1 will be installed
+--> Processing Dependency: krb5-devel(x86-64) for package: 1:openssl-devel-1.0.2k-12.amzn2.0.1.x86_64
+--> Running transaction check
+---> Package autoconf.noarch 0:2.69-11.amzn2 will be installed
+--> Processing Dependency: m4 >= 1.4.14 for package: autoconf-2.69-11.amzn2.noarch
+--> Processing Dependency: perl(Data::Dumper) for package: autoconf-2.69-11.amzn2.noarch
+---> Package emacs-filesystem.noarch 1:24.3-20.amzn2.0.1 will be installed
+---> Package fuse-libs.x86_64 0:2.9.2-8.amzn2 will be installed
+---> Package gcc.x86_64 0:7.3.1-5.amzn2.0.1 will be installed
+--> Processing Dependency: cpp = 7.3.1-5.amzn2.0.1 for package: gcc-7.3.1-5.amzn2.0.1.x86_64
+--> Processing Dependency: glibc-devel >= 2.2.90-12 for package: gcc-7.3.1-5.amzn2.0.1.x86_64
+--> Processing Dependency: libubsan.so.0()(64bit) for package: gcc-7.3.1-5.amzn2.0.1.x86_64
+--> Processing Dependency: libtsan.so.0()(64bit) for package: gcc-7.3.1-5.amzn2.0.1.x86_64
+--> Processing Dependency: libquadmath.so.0()(64bit) for package: gcc-7.3.1-5.amzn2.0.1.x86_64
+--> Processing Dependency: libmpxwrappers.so.2()(64bit) for package: gcc-7.3.1-5.amzn2.0.1.x86_64
+--> Processing Dependency: libmpx.so.2()(64bit) for package: gcc-7.3.1-5.amzn2.0.1.x86_64
+--> Processing Dependency: liblsan.so.0()(64bit) for package: gcc-7.3.1-5.amzn2.0.1.x86_64
+--> Processing Dependency: libitm.so.1()(64bit) for package: gcc-7.3.1-5.amzn2.0.1.x86_64
+--> Processing Dependency: libcilkrts.so.5()(64bit) for package: gcc-7.3.1-5.amzn2.0.1.x86_64
+--> Processing Dependency: libatomic.so.1()(64bit) for package: gcc-7.3.1-5.amzn2.0.1.x86_64
+--> Processing Dependency: libasan.so.4()(64bit) for package: gcc-7.3.1-5.amzn2.0.1.x86_64
+---> Package git-core.x86_64 0:2.14.4-1.amzn2 will be installed
+---> Package git-core-doc.x86_64 0:2.14.4-1.amzn2 will be installed
+---> Package krb5-devel.x86_64 0:1.15.1-19.amzn2.0.1 will be installed
+--> Processing Dependency: libkadm5(x86-64) = 1.15.1-19.amzn2.0.1 for package: krb5-devel-1.15.1-19.amzn2.0.1.x86_64
+--> Processing Dependency: libverto-devel for package: krb5-devel-1.15.1-19.amzn2.0.1.x86_64
+--> Processing Dependency: libselinux-devel for package: krb5-devel-1.15.1-19.amzn2.0.1.x86_64
+--> Processing Dependency: libcom_err-devel for package: krb5-devel-1.15.1-19.amzn2.0.1.x86_64
+--> Processing Dependency: keyutils-libs-devel for package: krb5-devel-1.15.1-19.amzn2.0.1.x86_64
+---> Package libmpc.x86_64 0:1.0.1-3.amzn2.0.1 will be installed
+---> Package libsecret.x86_64 0:0.18.5-2.amzn2 will be installed
+---> Package mpfr.x86_64 0:3.1.1-4.amzn2.0.1 will be installed
+---> Package pcre2.x86_64 0:10.23-2.amzn2 will be installed
+---> Package perl-Error.noarch 1:0.17020-2.amzn2 will be installed
+---> Package perl-Git.noarch 0:2.14.4-1.amzn2 will be installed
+---> Package perl-TermReadKey.x86_64 0:2.30-20.amzn2 will be installed
+---> Package perl-Test-Harness.noarch 0:3.28-3.amzn2 will be installed
+---> Package perl-Thread-Queue.noarch 0:3.02-2.amzn2 will be installed
+---> Package xz-devel.x86_64 0:5.2.2-1.amzn2 will be installed
+---> Package zlib-devel.x86_64 0:1.2.7-17.amzn2.0.1 will be installed
+--> Running transaction check
+---> Package cpp.x86_64 0:7.3.1-5.amzn2.0.1 will be installed
+---> Package glibc-devel.x86_64 0:2.26-27.amzn2.0.5 will be installed
+--> Processing Dependency: glibc-headers = 2.26-27.amzn2.0.5 for package: glibc-devel-2.26-27.amzn2.0.5.x86_64
+--> Processing Dependency: glibc-headers for package: glibc-devel-2.26-27.amzn2.0.5.x86_64
+---> Package keyutils-libs-devel.x86_64 0:1.5.8-3.amzn2 will be installed
+---> Package libatomic.x86_64 0:7.3.1-5.amzn2.0.1 will be installed
+---> Package libcilkrts.x86_64 0:7.3.1-5.amzn2.0.1 will be installed
+---> Package libcom_err-devel.x86_64 0:1.42.9-10.amzn2 will be installed
+---> Package libitm.x86_64 0:7.3.1-5.amzn2.0.1 will be installed
+---> Package libkadm5.x86_64 0:1.15.1-19.amzn2.0.1 will be installed
+---> Package libmpx.x86_64 0:7.3.1-5.amzn2.0.1 will be installed
+---> Package libquadmath.x86_64 0:7.3.1-5.amzn2.0.1 will be installed
+---> Package libsanitizer.x86_64 0:7.3.1-5.amzn2.0.1 will be installed
+---> Package libselinux-devel.x86_64 0:2.5-11.amzn2 will be installed
+--> Processing Dependency: libsepol-devel(x86-64) >= 2.5-6 for package: libselinux-devel-2.5-11.amzn2.x86_64
+--> Processing Dependency: pkgconfig(libsepol) for package: libselinux-devel-2.5-11.amzn2.x86_64
+--> Processing Dependency: pkgconfig(libpcre) for package: libselinux-devel-2.5-11.amzn2.x86_64
+---> Package libverto-devel.x86_64 0:0.2.5-4.amzn2 will be installed
+---> Package m4.x86_64 0:1.4.16-10.amzn2 will be installed
+---> Package perl-Data-Dumper.x86_64 0:2.145-3.amzn2 will be installed
+--> Running transaction check
+---> Package glibc-headers.x86_64 0:2.26-27.amzn2.0.5 will be installed
+--> Processing Dependency: kernel-headers >= 2.2.1 for package: glibc-headers-2.26-27.amzn2.0.5.x86_64
+--> Processing Dependency: kernel-headers for package: glibc-headers-2.26-27.amzn2.0.5.x86_64
+---> Package libsepol-devel.x86_64 0:2.5-6.amzn2 will be installed
+---> Package pcre-devel.x86_64 0:8.32-17.amzn2 will be installed
+--> Running transaction check
+---> Package kernel-headers.x86_64 0:4.14.51-66.38.amzn2 will be installed
+--> Finished Dependency Resolution
+
+Dependencies Resolved
+
+=======================================================================================================================================================================
+ Package                                      Arch                            Version                                        Repository                           Size
+=======================================================================================================================================================================
+Installing:
+ automake                                     noarch                          1.13.4-3.1.amzn2                               amzn2-core                          679 k
+ fuse                                         x86_64                          2.9.2-8.amzn2                                  amzn2-core                           85 k
+ fuse-devel                                   x86_64                          2.9.2-8.amzn2                                  amzn2-core                           37 k
+ gcc-c++                                      x86_64                          7.3.1-5.amzn2.0.1                              amzn2-core                           13 M
+ git                                          x86_64                          2.14.4-1.amzn2                                 amzn2-core                          1.1 M
+ libcurl-devel                                x86_64                          7.55.1-12.amzn2.0.1                            amzn2-core                          746 k
+ libxml2-devel                                x86_64                          2.9.1-6.amzn2.3                                amzn2-core                          1.0 M
+ openssl-devel                                x86_64                          1:1.0.2k-12.amzn2.0.1                          amzn2-core                          1.5 M
+Installing for dependencies:
+ autoconf                                     noarch                          2.69-11.amzn2                                  amzn2-core                          701 k
+ cpp                                          x86_64                          7.3.1-5.amzn2.0.1                              amzn2-core                          9.2 M
+ emacs-filesystem                             noarch                          1:24.3-20.amzn2.0.1                            amzn2-core                           58 k
+ fuse-libs                                    x86_64                          2.9.2-8.amzn2                                  amzn2-core                           92 k
+ gcc                                          x86_64                          7.3.1-5.amzn2.0.1                              amzn2-core                           22 M
+ git-core                                     x86_64                          2.14.4-1.amzn2                                 amzn2-core                          4.1 M
+ git-core-doc                                 x86_64                          2.14.4-1.amzn2                                 amzn2-core                          2.3 M
+ glibc-devel                                  x86_64                          2.26-27.amzn2.0.5                              amzn2-core                          986 k
+ glibc-headers                                x86_64                          2.26-27.amzn2.0.5                              amzn2-core                          505 k
+ kernel-headers                               x86_64                          4.14.51-66.38.amzn2                            amzn2-core                          1.1 M
+ keyutils-libs-devel                          x86_64                          1.5.8-3.amzn2                                  amzn2-core                           37 k
+ krb5-devel                                   x86_64                          1.15.1-19.amzn2.0.1                            amzn2-core                          269 k
+ libatomic                                    x86_64                          7.3.1-5.amzn2.0.1                              amzn2-core                           40 k
+ libcilkrts                                   x86_64                          7.3.1-5.amzn2.0.1                              amzn2-core                           80 k
+ libcom_err-devel                             x86_64                          1.42.9-10.amzn2                                amzn2-core                           31 k
+ libitm                                       x86_64                          7.3.1-5.amzn2.0.1                              amzn2-core                           79 k
+ libkadm5                                     x86_64                          1.15.1-19.amzn2.0.1                            amzn2-core                          177 k
+ libmpc                                       x86_64                          1.0.1-3.amzn2.0.1                              amzn2-core                           52 k
+ libmpx                                       x86_64                          7.3.1-5.amzn2.0.1                              amzn2-core                           46 k
+ libquadmath                                  x86_64                          7.3.1-5.amzn2.0.1                              amzn2-core                          186 k
+ libsanitizer                                 x86_64                          7.3.1-5.amzn2.0.1                              amzn2-core                          649 k
+ libsecret                                    x86_64                          0.18.5-2.amzn2                                 amzn2-core                          152 k
+ libselinux-devel                             x86_64                          2.5-11.amzn2                                   amzn2-core                          186 k
+ libsepol-devel                               x86_64                          2.5-6.amzn2                                    amzn2-core                           74 k
+ libverto-devel                               x86_64                          0.2.5-4.amzn2                                  amzn2-core                           12 k
+ m4                                           x86_64                          1.4.16-10.amzn2                                amzn2-core                          256 k
+ mpfr                                         x86_64                          3.1.1-4.amzn2.0.1                              amzn2-core                          208 k
+ pcre-devel                                   x86_64                          8.32-17.amzn2                                  amzn2-core                          480 k
+ pcre2                                        x86_64                          10.23-2.amzn2                                  amzn2-core                          209 k
+ perl-Data-Dumper                             x86_64                          2.145-3.amzn2                                  amzn2-core                           48 k
+ perl-Error                                   noarch                          1:0.17020-2.amzn2                              amzn2-core                           32 k
+ perl-Git                                     noarch                          2.14.4-1.amzn2                                 amzn2-core                           67 k
+ perl-TermReadKey                             x86_64                          2.30-20.amzn2                                  amzn2-core                           31 k
+ perl-Test-Harness                            noarch                          3.28-3.amzn2                                   amzn2-core                          302 k
+ perl-Thread-Queue                            noarch                          3.02-2.amzn2                                   amzn2-core                           17 k
+ xz-devel                                     x86_64                          5.2.2-1.amzn2                                  amzn2-core                           46 k
+ zlib-devel                                   x86_64                          1.2.7-17.amzn2.0.1                             amzn2-core                           50 k
+
+Transaction Summary
+=======================================================================================================================================================================
+Install  8 Packages (+37 Dependent packages)
+
+Total download size: 63 M
+Installed size: 194 M
+Downloading packages:
+(1/45): autoconf-2.69-11.amzn2.noarch.rpm                                                                                                       | 701 kB  00:00:00
+(2/45): automake-1.13.4-3.1.amzn2.noarch.rpm                                                                                                    | 679 kB  00:00:00
+(3/45): emacs-filesystem-24.3-20.amzn2.0.1.noarch.rpm                                                                                           |  58 kB  00:00:00
+(4/45): fuse-2.9.2-8.amzn2.x86_64.rpm                                                                                                           |  85 kB  00:00:00
+(5/45): fuse-devel-2.9.2-8.amzn2.x86_64.rpm                                                                                                     |  37 kB  00:00:00
+(6/45): fuse-libs-2.9.2-8.amzn2.x86_64.rpm                                                                                                      |  92 kB  00:00:00
+(7/45): cpp-7.3.1-5.amzn2.0.1.x86_64.rpm                                                                                                        | 9.2 MB  00:00:00
+(8/45): gcc-c++-7.3.1-5.amzn2.0.1.x86_64.rpm                                                                                                    |  13 MB  00:00:00
+(9/45): git-2.14.4-1.amzn2.x86_64.rpm                                                                                                           | 1.1 MB  00:00:00
+(10/45): gcc-7.3.1-5.amzn2.0.1.x86_64.rpm                                                                                                       |  22 MB  00:00:00
+(11/45): git-core-2.14.4-1.amzn2.x86_64.rpm                                                                                                     | 4.1 MB  00:00:00
+(12/45): git-core-doc-2.14.4-1.amzn2.x86_64.rpm                                                                                                 | 2.3 MB  00:00:00
+(13/45): glibc-devel-2.26-27.amzn2.0.5.x86_64.rpm                                                                                               | 986 kB  00:00:00
+(14/45): kernel-headers-4.14.51-66.38.amzn2.x86_64.rpm                                                                                          | 1.1 MB  00:00:00
+(15/45): keyutils-libs-devel-1.5.8-3.amzn2.x86_64.rpm                                                                                           |  37 kB  00:00:00
+(16/45): krb5-devel-1.15.1-19.amzn2.0.1.x86_64.rpm                                                                                              | 269 kB  00:00:00
+(17/45): libatomic-7.3.1-5.amzn2.0.1.x86_64.rpm                                                                                                 |  40 kB  00:00:00
+(18/45): libcilkrts-7.3.1-5.amzn2.0.1.x86_64.rpm                                                                                                |  80 kB  00:00:00
+(19/45): libcom_err-devel-1.42.9-10.amzn2.x86_64.rpm                                                                                            |  31 kB  00:00:00
+(20/45): glibc-headers-2.26-27.amzn2.0.5.x86_64.rpm                                                                                             | 505 kB  00:00:00
+(21/45): libcurl-devel-7.55.1-12.amzn2.0.1.x86_64.rpm                                                                                           | 746 kB  00:00:00
+(22/45): libkadm5-1.15.1-19.amzn2.0.1.x86_64.rpm                                                                                                | 177 kB  00:00:00
+(23/45): libitm-7.3.1-5.amzn2.0.1.x86_64.rpm                                                                                                    |  79 kB  00:00:00
+(24/45): libmpc-1.0.1-3.amzn2.0.1.x86_64.rpm                                                                                                    |  52 kB  00:00:00
+(25/45): libmpx-7.3.1-5.amzn2.0.1.x86_64.rpm                                                                                                    |  46 kB  00:00:00
+(26/45): libsanitizer-7.3.1-5.amzn2.0.1.x86_64.rpm                                                                                              | 649 kB  00:00:00
+(27/45): libsecret-0.18.5-2.amzn2.x86_64.rpm                                                                                                    | 152 kB  00:00:00
+(28/45): libquadmath-7.3.1-5.amzn2.0.1.x86_64.rpm                                                                                               | 186 kB  00:00:00
+(29/45): libselinux-devel-2.5-11.amzn2.x86_64.rpm                                                                                               | 186 kB  00:00:00
+(30/45): libsepol-devel-2.5-6.amzn2.x86_64.rpm                                                                                                  |  74 kB  00:00:00
+(31/45): libverto-devel-0.2.5-4.amzn2.x86_64.rpm                                                                                                |  12 kB  00:00:00
+(32/45): m4-1.4.16-10.amzn2.x86_64.rpm                                                                                                          | 256 kB  00:00:00
+(33/45): mpfr-3.1.1-4.amzn2.0.1.x86_64.rpm                                                                                                      | 208 kB  00:00:00
+(34/45): libxml2-devel-2.9.1-6.amzn2.3.x86_64.rpm                                                                                               | 1.0 MB  00:00:00
+(35/45): pcre-devel-8.32-17.amzn2.x86_64.rpm                                                                                                    | 480 kB  00:00:00
+(36/45): pcre2-10.23-2.amzn2.x86_64.rpm                                                                                                         | 209 kB  00:00:00
+(37/45): openssl-devel-1.0.2k-12.amzn2.0.1.x86_64.rpm                                                                                           | 1.5 MB  00:00:00
+(38/45): perl-Error-0.17020-2.amzn2.noarch.rpm                                                                                                  |  32 kB  00:00:00
+(39/45): perl-Data-Dumper-2.145-3.amzn2.x86_64.rpm                                                                                              |  48 kB  00:00:00
+(40/45): perl-TermReadKey-2.30-20.amzn2.x86_64.rpm                                                                                              |  31 kB  00:00:00
+(41/45): perl-Git-2.14.4-1.amzn2.noarch.rpm                                                                                                     |  67 kB  00:00:00
+(42/45): perl-Thread-Queue-3.02-2.amzn2.noarch.rpm                                                                                              |  17 kB  00:00:00
+(43/45): perl-Test-Harness-3.28-3.amzn2.noarch.rpm                                                                                              | 302 kB  00:00:00
+(44/45): zlib-devel-1.2.7-17.amzn2.0.1.x86_64.rpm                                                                                               |  50 kB  00:00:00
+(45/45): xz-devel-5.2.2-1.amzn2.x86_64.rpm                                                                                                      |  46 kB  00:00:00
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Total                                                                                                                                   31 MB/s |  63 MB  00:00:02
+Running transaction check
+Running transaction test
+Transaction test succeeded
+Running transaction
+  Installing : mpfr-3.1.1-4.amzn2.0.1.x86_64                                                                                                                      1/45
+  Installing : libmpc-1.0.1-3.amzn2.0.1.x86_64                                                                                                                    2/45
+  Installing : pcre2-10.23-2.amzn2.x86_64                                                                                                                         3/45
+  Installing : git-core-2.14.4-1.amzn2.x86_64                                                                                                                     4/45
+  Installing : 1:perl-Error-0.17020-2.amzn2.noarch                                                                                                                5/45
+  Installing : zlib-devel-1.2.7-17.amzn2.0.1.x86_64                                                                                                               6/45
+  Installing : git-core-doc-2.14.4-1.amzn2.x86_64                                                                                                                 7/45
+  Installing : cpp-7.3.1-5.amzn2.0.1.x86_64                                                                                                                       8/45
+  Installing : libmpx-7.3.1-5.amzn2.0.1.x86_64                                                                                                                    9/45
+  Installing : libquadmath-7.3.1-5.amzn2.0.1.x86_64                                                                                                              10/45
+  Installing : libcilkrts-7.3.1-5.amzn2.0.1.x86_64                                                                                                               11/45
+  Installing : perl-TermReadKey-2.30-20.amzn2.x86_64                                                                                                             12/45
+  Installing : libatomic-7.3.1-5.amzn2.0.1.x86_64                                                                                                                13/45
+  Installing : libitm-7.3.1-5.amzn2.0.1.x86_64                                                                                                                   14/45
+  Installing : fuse-libs-2.9.2-8.amzn2.x86_64                                                                                                                    15/45
+  Installing : perl-Data-Dumper-2.145-3.amzn2.x86_64                                                                                                             16/45
+  Installing : keyutils-libs-devel-1.5.8-3.amzn2.x86_64                                                                                                          17/45
+  Installing : xz-devel-5.2.2-1.amzn2.x86_64                                                                                                                     18/45
+  Installing : 1:emacs-filesystem-24.3-20.amzn2.0.1.noarch                                                                                                       19/45
+  Installing : libsecret-0.18.5-2.amzn2.x86_64                                                                                                                   20/45
+  Installing : perl-Git-2.14.4-1.amzn2.noarch                                                                                                                    21/45
+  Installing : git-2.14.4-1.amzn2.x86_64                                                                                                                         22/45
+  Installing : perl-Test-Harness-3.28-3.amzn2.noarch                                                                                                             23/45
+  Installing : libkadm5-1.15.1-19.amzn2.0.1.x86_64                                                                                                               24/45
+  Installing : libsanitizer-7.3.1-5.amzn2.0.1.x86_64                                                                                                             25/45
+  Installing : libverto-devel-0.2.5-4.amzn2.x86_64                                                                                                               26/45
+  Installing : m4-1.4.16-10.amzn2.x86_64                                                                                                                         27/45
+  Installing : autoconf-2.69-11.amzn2.noarch                                                                                                                     28/45
+  Installing : pcre-devel-8.32-17.amzn2.x86_64                                                                                                                   29/45
+  Installing : libsepol-devel-2.5-6.amzn2.x86_64                                                                                                                 30/45
+  Installing : libselinux-devel-2.5-11.amzn2.x86_64                                                                                                              31/45
+  Installing : kernel-headers-4.14.51-66.38.amzn2.x86_64                                                                                                         32/45
+  Installing : glibc-headers-2.26-27.amzn2.0.5.x86_64                                                                                                            33/45
+  Installing : glibc-devel-2.26-27.amzn2.0.5.x86_64                                                                                                              34/45
+  Installing : gcc-7.3.1-5.amzn2.0.1.x86_64                                                                                                                      35/45
+  Installing : libcom_err-devel-1.42.9-10.amzn2.x86_64                                                                                                           36/45
+  Installing : krb5-devel-1.15.1-19.amzn2.0.1.x86_64                                                                                                             37/45
+  Installing : perl-Thread-Queue-3.02-2.amzn2.noarch                                                                                                             38/45
+  Installing : automake-1.13.4-3.1.amzn2.noarch                                                                                                                  39/45
+  Installing : 1:openssl-devel-1.0.2k-12.amzn2.0.1.x86_64                                                                                                        40/45
+  Installing : gcc-c++-7.3.1-5.amzn2.0.1.x86_64                                                                                                                  41/45
+  Installing : libxml2-devel-2.9.1-6.amzn2.3.x86_64                                                                                                              42/45
+  Installing : fuse-devel-2.9.2-8.amzn2.x86_64                                                                                                                   43/45
+  Installing : fuse-2.9.2-8.amzn2.x86_64                                                                                                                         44/45
+  Installing : libcurl-devel-7.55.1-12.amzn2.0.1.x86_64                                                                                                          45/45
+  Verifying  : perl-Thread-Queue-3.02-2.amzn2.noarch                                                                                                              1/45
+  Verifying  : libcom_err-devel-1.42.9-10.amzn2.x86_64                                                                                                            2/45
+  Verifying  : glibc-devel-2.26-27.amzn2.0.5.x86_64                                                                                                               3/45
+  Verifying  : glibc-headers-2.26-27.amzn2.0.5.x86_64                                                                                                             4/45
+  Verifying  : kernel-headers-4.14.51-66.38.amzn2.x86_64                                                                                                          5/45
+  Verifying  : libsepol-devel-2.5-6.amzn2.x86_64                                                                                                                  6/45
+  Verifying  : gcc-7.3.1-5.amzn2.0.1.x86_64                                                                                                                       7/45
+  Verifying  : libselinux-devel-2.5-11.amzn2.x86_64                                                                                                               8/45
+  Verifying  : pcre-devel-8.32-17.amzn2.x86_64                                                                                                                    9/45
+  Verifying  : git-core-2.14.4-1.amzn2.x86_64                                                                                                                    10/45
+  Verifying  : m4-1.4.16-10.amzn2.x86_64                                                                                                                         11/45
+  Verifying  : libcurl-devel-7.55.1-12.amzn2.0.1.x86_64                                                                                                          12/45
+  Verifying  : cpp-7.3.1-5.amzn2.0.1.x86_64                                                                                                                      13/45
+  Verifying  : libverto-devel-0.2.5-4.amzn2.x86_64                                                                                                               14/45
+  Verifying  : libsanitizer-7.3.1-5.amzn2.0.1.x86_64                                                                                                             15/45
+  Verifying  : libkadm5-1.15.1-19.amzn2.0.1.x86_64                                                                                                               16/45
+  Verifying  : perl-Test-Harness-3.28-3.amzn2.noarch                                                                                                             17/45
+  Verifying  : autoconf-2.69-11.amzn2.noarch                                                                                                                     18/45
+  Verifying  : libxml2-devel-2.9.1-6.amzn2.3.x86_64                                                                                                              19/45
+  Verifying  : libsecret-0.18.5-2.amzn2.x86_64                                                                                                                   20/45
+  Verifying  : 1:emacs-filesystem-24.3-20.amzn2.0.1.noarch                                                                                                       21/45
+  Verifying  : xz-devel-5.2.2-1.amzn2.x86_64                                                                                                                     22/45
+  Verifying  : libmpc-1.0.1-3.amzn2.0.1.x86_64                                                                                                                   23/45
+  Verifying  : keyutils-libs-devel-1.5.8-3.amzn2.x86_64                                                                                                          24/45
+  Verifying  : automake-1.13.4-3.1.amzn2.noarch                                                                                                                  25/45
+  Verifying  : perl-Data-Dumper-2.145-3.amzn2.x86_64                                                                                                             26/45
+  Verifying  : git-core-doc-2.14.4-1.amzn2.x86_64                                                                                                                27/45
+  Verifying  : 1:openssl-devel-1.0.2k-12.amzn2.0.1.x86_64                                                                                                        28/45
+  Verifying  : fuse-libs-2.9.2-8.amzn2.x86_64                                                                                                                    29/45
+  Verifying  : fuse-2.9.2-8.amzn2.x86_64                                                                                                                         30/45
+  Verifying  : libitm-7.3.1-5.amzn2.0.1.x86_64                                                                                                                   31/45
+  Verifying  : zlib-devel-1.2.7-17.amzn2.0.1.x86_64                                                                                                              32/45
+  Verifying  : git-2.14.4-1.amzn2.x86_64                                                                                                                         33/45
+  Verifying  : 1:perl-Error-0.17020-2.amzn2.noarch                                                                                                               34/45
+  Verifying  : fuse-devel-2.9.2-8.amzn2.x86_64                                                                                                                   35/45
+  Verifying  : libatomic-7.3.1-5.amzn2.0.1.x86_64                                                                                                                36/45
+  Verifying  : gcc-c++-7.3.1-5.amzn2.0.1.x86_64                                                                                                                  37/45
+  Verifying  : krb5-devel-1.15.1-19.amzn2.0.1.x86_64                                                                                                             38/45
+  Verifying  : perl-TermReadKey-2.30-20.amzn2.x86_64                                                                                                             39/45
+  Verifying  : mpfr-3.1.1-4.amzn2.0.1.x86_64                                                                                                                     40/45
+  Verifying  : libcilkrts-7.3.1-5.amzn2.0.1.x86_64                                                                                                               41/45
+  Verifying  : pcre2-10.23-2.amzn2.x86_64                                                                                                                        42/45
+  Verifying  : perl-Git-2.14.4-1.amzn2.noarch                                                                                                                    43/45
+  Verifying  : libquadmath-7.3.1-5.amzn2.0.1.x86_64                                                                                                              44/45
+  Verifying  : libmpx-7.3.1-5.amzn2.0.1.x86_64                                                                                                                   45/45
+
+Installed:
+  automake.noarch 0:1.13.4-3.1.amzn2  fuse.x86_64 0:2.9.2-8.amzn2                 fuse-devel.x86_64 0:2.9.2-8.amzn2       gcc-c++.x86_64 0:7.3.1-5.amzn2.0.1
+  git.x86_64 0:2.14.4-1.amzn2         libcurl-devel.x86_64 0:7.55.1-12.amzn2.0.1  libxml2-devel.x86_64 0:2.9.1-6.amzn2.3  openssl-devel.x86_64 1:1.0.2k-12.amzn2.0.1
+
+Dependency Installed:
+  autoconf.noarch 0:2.69-11.amzn2                        cpp.x86_64 0:7.3.1-5.amzn2.0.1                        emacs-filesystem.noarch 1:24.3-20.amzn2.0.1
+  fuse-libs.x86_64 0:2.9.2-8.amzn2                       gcc.x86_64 0:7.3.1-5.amzn2.0.1                        git-core.x86_64 0:2.14.4-1.amzn2
+  git-core-doc.x86_64 0:2.14.4-1.amzn2                   glibc-devel.x86_64 0:2.26-27.amzn2.0.5                glibc-headers.x86_64 0:2.26-27.amzn2.0.5
+  kernel-headers.x86_64 0:4.14.51-66.38.amzn2            keyutils-libs-devel.x86_64 0:1.5.8-3.amzn2            krb5-devel.x86_64 0:1.15.1-19.amzn2.0.1
+  libatomic.x86_64 0:7.3.1-5.amzn2.0.1                   libcilkrts.x86_64 0:7.3.1-5.amzn2.0.1                 libcom_err-devel.x86_64 0:1.42.9-10.amzn2
+  libitm.x86_64 0:7.3.1-5.amzn2.0.1                      libkadm5.x86_64 0:1.15.1-19.amzn2.0.1                 libmpc.x86_64 0:1.0.1-3.amzn2.0.1
+  libmpx.x86_64 0:7.3.1-5.amzn2.0.1                      libquadmath.x86_64 0:7.3.1-5.amzn2.0.1                libsanitizer.x86_64 0:7.3.1-5.amzn2.0.1
+  libsecret.x86_64 0:0.18.5-2.amzn2                      libselinux-devel.x86_64 0:2.5-11.amzn2                libsepol-devel.x86_64 0:2.5-6.amzn2
+  libverto-devel.x86_64 0:0.2.5-4.amzn2                  m4.x86_64 0:1.4.16-10.amzn2                           mpfr.x86_64 0:3.1.1-4.amzn2.0.1
+  pcre-devel.x86_64 0:8.32-17.amzn2                      pcre2.x86_64 0:10.23-2.amzn2                          perl-Data-Dumper.x86_64 0:2.145-3.amzn2
+  perl-Error.noarch 1:0.17020-2.amzn2                    perl-Git.noarch 0:2.14.4-1.amzn2                      perl-TermReadKey.x86_64 0:2.30-20.amzn2
+  perl-Test-Harness.noarch 0:3.28-3.amzn2                perl-Thread-Queue.noarch 0:3.02-2.amzn2               xz-devel.x86_64 0:5.2.2-1.amzn2
+  zlib-devel.x86_64 0:1.2.7-17.amzn2.0.1
+
+Complete!
+[root@ip-172-31-18-254 ~]#
+[root@ip-172-31-18-254 ~]#
+[root@ip-172-31-18-254 ~]# git clone https://github.com/s3fs-fuse/s3fs-fuse.git
+Cloning into 's3fs-fuse'...
+remote: Counting objects: 4122, done.
+remote: Compressing objects: 100% (23/23), done.
+remote: Total 4122 (delta 18), reused 24 (delta 13), pack-reused 4085
+Receiving objects: 100% (4122/4122), 2.25 MiB | 1.37 MiB/s, done.
+Resolving deltas: 100% (2823/2823), done.
+[root@ip-172-31-18-254 ~]#
+[root@ip-172-31-18-254 ~]#
+[root@ip-172-31-18-254 ~]# cd s3fs-fuse/
+[root@ip-172-31-18-254 s3fs-fuse]# ls
+AUTHORS  autogen.sh  ChangeLog  configure.ac  COPYING  doc  INSTALL  Makefile.am  README.md  src  test
+[root@ip-172-31-18-254 s3fs-fuse]# ./autogen.sh
+--- Make commit hash file -------
+--- Finished commit hash file ---
+--- Start autotools -------------
+configure.ac:26: installing './config.guess'
+configure.ac:26: installing './config.sub'
+configure.ac:27: installing './install-sh'
+configure.ac:27: installing './missing'
+src/Makefile.am: installing './depcomp'
+parallel-tests: installing './test-driver'
+--- Finished autotools ----------
+[root@ip-172-31-18-254 s3fs-fuse]# ./config
+config.guess  config.sub    configure
+[root@ip-172-31-18-254 s3fs-fuse]# ./configure prefix-/usr --with openssl
+configure: WARNING: you should use --build, --host, --target
+configure: WARNING: invalid host type: prefix-/usr
+configure: error: unrecognized option: `--with'
+Try `./configure --help' for more information
+[root@ip-172-31-18-254 s3fs-fuse]# ./configure prefix-/usr --with-openssl
+configure: WARNING: you should use --build, --host, --target
+configure: WARNING: invalid host type: prefix-/usr
+checking build system type... Invalid configuration `prefix-/usr': machine `prefix' not recognized
+configure: error: /bin/sh ./config.sub prefix-/usr failed
+[root@ip-172-31-18-254 s3fs-fuse]# ./configure prefix=/usr --with-openssl
+checking build system type... x86_64-unknown-linux-gnu
+checking host system type... x86_64-unknown-linux-gnu
+checking target system type... x86_64-unknown-linux-gnu
+checking for a BSD-compatible install... /usr/bin/install -c
+checking whether build environment is sane... yes
+checking for a thread-safe mkdir -p... /usr/bin/mkdir -p
+checking for gawk... gawk
+checking whether make sets $(MAKE)... yes
+checking whether make supports nested variables... yes
+checking for g++... g++
+checking whether the C++ compiler works... yes
+checking for C++ compiler default output file name... a.out
+checking for suffix of executables...
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether we are using the GNU C++ compiler... yes
+checking whether g++ accepts -g... yes
+checking for style of include used by make... GNU
+checking dependency style of g++... gcc3
+checking for gcc... gcc
+checking whether we are using the GNU C compiler... yes
+checking whether gcc accepts -g... yes
+checking for gcc option to accept ISO C89... none needed
+checking dependency style of gcc... gcc3
+checking how to run the C preprocessor... gcc -E
+checking for grep that handles long lines and -e... /usr/bin/grep
+checking for egrep... /usr/bin/grep -E
+checking for ANSI C header files... yes
+checking for sys/types.h... yes
+checking for sys/stat.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for memory.h... yes
+checking for strings.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for unistd.h... yes
+checking sys/xattr.h usability... yes
+checking sys/xattr.h presence... yes
+checking for sys/xattr.h... yes
+checking attr/xattr.h usability... no
+checking attr/xattr.h presence... no
+checking for attr/xattr.h... no
+checking sys/extattr.h usability... no
+checking sys/extattr.h presence... no
+checking for sys/extattr.h... no
+checking s3fs build with nettle(GnuTLS)... no
+checking s3fs build with OpenSSL... yes
+checking s3fs build with GnuTLS... no
+checking s3fs build with NSS... no
+checking for pkg-config... /usr/bin/pkg-config
+checking pkg-config is at least version 0.9.0... yes
+checking for common_lib_checking... yes
+checking compile s3fs with... OpenSSL
+checking for DEPS... yes
+checking for malloc_trim... yes
+checking for library containing clock_gettime... none required
+checking for clock_gettime... yes
+checking pthread mutex recursive... PTHREAD_MUTEX_RECURSIVE
+checking for git... yes
+checking for .git... yes
+checking github short commit hash... 06032aa
+checking that generated files are newer than configure... done
+configure: creating ./config.status
+config.status: creating Makefile
+config.status: creating src/Makefile
+config.status: creating test/Makefile
+config.status: creating doc/Makefile
+config.status: creating config.h
+config.status: executing depfiles commands
+[root@ip-172-31-18-254 s3fs-fuse]# make
+make  all-recursive
+make[1]: Entering directory `/root/s3fs-fuse'
+Making all in src
+make[2]: Entering directory `/root/s3fs-fuse/src'
+g++ -DHAVE_CONFIG_H -I. -I..  -D_FILE_OFFSET_BITS=64 -I/usr/include/fuse -I/usr/include/libxml2      -g -O2 -Wall -D_FILE_OFFSET_BITS=64 -MT s3fs.o -MD -MP -MF .deps/s3fs.Tpo -c -o s3fs.o s3fs.cpp
+mv -f .deps/s3fs.Tpo .deps/s3fs.Po
+g++ -DHAVE_CONFIG_H -I. -I..  -D_FILE_OFFSET_BITS=64 -I/usr/include/fuse -I/usr/include/libxml2      -g -O2 -Wall -D_FILE_OFFSET_BITS=64 -MT curl.o -MD -MP -MF .deps/curl.Tpo -c -o curl.o curl.cpp
+mv -f .deps/curl.Tpo .deps/curl.Po
+g++ -DHAVE_CONFIG_H -I. -I..  -D_FILE_OFFSET_BITS=64 -I/usr/include/fuse -I/usr/include/libxml2      -g -O2 -Wall -D_FILE_OFFSET_BITS=64 -MT cache.o -MD -MP -MF .deps/cache.Tpo -c -o cache.o cache.cpp
+mv -f .deps/cache.Tpo .deps/cache.Po
+g++ -DHAVE_CONFIG_H -I. -I..  -D_FILE_OFFSET_BITS=64 -I/usr/include/fuse -I/usr/include/libxml2      -g -O2 -Wall -D_FILE_OFFSET_BITS=64 -MT string_util.o -MD -MP -MF .deps/string_util.Tpo -c -o string_util.o string_util.cpp
+mv -f .deps/string_util.Tpo .deps/string_util.Po
+g++ -DHAVE_CONFIG_H -I. -I..  -D_FILE_OFFSET_BITS=64 -I/usr/include/fuse -I/usr/include/libxml2      -g -O2 -Wall -D_FILE_OFFSET_BITS=64 -MT s3fs_util.o -MD -MP -MF .deps/s3fs_util.Tpo -c -o s3fs_util.o s3fs_util.cpp
+mv -f .deps/s3fs_util.Tpo .deps/s3fs_util.Po
+g++ -DHAVE_CONFIG_H -I. -I..  -D_FILE_OFFSET_BITS=64 -I/usr/include/fuse -I/usr/include/libxml2      -g -O2 -Wall -D_FILE_OFFSET_BITS=64 -MT fdcache.o -MD -MP -MF .deps/fdcache.Tpo -c -o fdcache.o fdcache.cpp
+mv -f .deps/fdcache.Tpo .deps/fdcache.Po
+g++ -DHAVE_CONFIG_H -I. -I..  -D_FILE_OFFSET_BITS=64 -I/usr/include/fuse -I/usr/include/libxml2      -g -O2 -Wall -D_FILE_OFFSET_BITS=64 -MT common_auth.o -MD -MP -MF .deps/common_auth.Tpo -c -o common_auth.o common_auth.cpp
+mv -f .deps/common_auth.Tpo .deps/common_auth.Po
+g++ -DHAVE_CONFIG_H -I. -I..  -D_FILE_OFFSET_BITS=64 -I/usr/include/fuse -I/usr/include/libxml2      -g -O2 -Wall -D_FILE_OFFSET_BITS=64 -MT addhead.o -MD -MP -MF .deps/addhead.Tpo -c -o addhead.o addhead.cpp
+mv -f .deps/addhead.Tpo .deps/addhead.Po
+g++ -DHAVE_CONFIG_H -I. -I..  -D_FILE_OFFSET_BITS=64 -I/usr/include/fuse -I/usr/include/libxml2      -g -O2 -Wall -D_FILE_OFFSET_BITS=64 -MT openssl_auth.o -MD -MP -MF .deps/openssl_auth.Tpo -c -o openssl_auth.o openssl_auth.cpp
+mv -f .deps/openssl_auth.Tpo .deps/openssl_auth.Po
+g++  -g -O2 -Wall -D_FILE_OFFSET_BITS=64   -o s3fs s3fs.o curl.o cache.o string_util.o s3fs_util.o fdcache.o common_auth.o addhead.o openssl_auth.o   -pthread -lfuse -lcurl -lxml2 -lcrypto
+g++ -DHAVE_CONFIG_H -I. -I..  -D_FILE_OFFSET_BITS=64 -I/usr/include/fuse -I/usr/include/libxml2      -g -O2 -Wall -D_FILE_OFFSET_BITS=64 -MT test_string_util.o -MD -MP -MF .deps/test_string_util.Tpo -c -o test_string_util.o test_string_util.cpp
+mv -f .deps/test_string_util.Tpo .deps/test_string_util.Po
+g++  -g -O2 -Wall -D_FILE_OFFSET_BITS=64   -o test_string_util string_util.o test_string_util.o
+make[2]: Leaving directory `/root/s3fs-fuse/src'
+Making all in test
+make[2]: Entering directory `/root/s3fs-fuse/test'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/root/s3fs-fuse/test'
+Making all in doc
+make[2]: Entering directory `/root/s3fs-fuse/doc'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/root/s3fs-fuse/doc'
+make[2]: Entering directory `/root/s3fs-fuse'
+make[2]: Leaving directory `/root/s3fs-fuse'
+make[1]: Leaving directory `/root/s3fs-fuse'
+[root@ip-172-31-18-254 s3fs-fuse]#
+[root@ip-172-31-18-254 s3fs-fuse]#
+[root@ip-172-31-18-254 s3fs-fuse]# make install
+Making install in src
+make[1]: Entering directory `/root/s3fs-fuse/src'
+make[2]: Entering directory `/root/s3fs-fuse/src'
+ /usr/bin/mkdir -p '/usr/bin'
+  /usr/bin/install -c s3fs '/usr/bin'
+make[2]: Nothing to be done for `install-data-am'.
+make[2]: Leaving directory `/root/s3fs-fuse/src'
+make[1]: Leaving directory `/root/s3fs-fuse/src'
+Making install in test
+make[1]: Entering directory `/root/s3fs-fuse/test'
+make[2]: Entering directory `/root/s3fs-fuse/test'
+make[2]: Nothing to be done for `install-exec-am'.
+make[2]: Nothing to be done for `install-data-am'.
+make[2]: Leaving directory `/root/s3fs-fuse/test'
+make[1]: Leaving directory `/root/s3fs-fuse/test'
+Making install in doc
+make[1]: Entering directory `/root/s3fs-fuse/doc'
+make[2]: Entering directory `/root/s3fs-fuse/doc'
+make[2]: Nothing to be done for `install-exec-am'.
+ /usr/bin/mkdir -p '/usr/share/man/man1'
+ /usr/bin/install -c -m 644 man/s3fs.1 '/usr/share/man/man1'
+make[2]: Leaving directory `/root/s3fs-fuse/doc'
+make[1]: Leaving directory `/root/s3fs-fuse/doc'
+make[1]: Entering directory `/root/s3fs-fuse'
+make[2]: Entering directory `/root/s3fs-fuse'
+make[2]: Nothing to be done for `install-exec-am'.
+make[2]: Nothing to be done for `install-data-am'.
+make[2]: Leaving directory `/root/s3fs-fuse'
+make[1]: Leaving directory `/root/s3fs-fuse'
+[root@ip-172-31-18-254 s3fs-fuse]# make install
+Making install in src
+make[1]: Entering directory `/root/s3fs-fuse/src'
+make[2]: Entering directory `/root/s3fs-fuse/src'
+ /usr/bin/mkdir -p '/usr/bin'
+  /usr/bin/install -c s3fs '/usr/bin'
+make[2]: Nothing to be done for `install-data-am'.
+make[2]: Leaving directory `/root/s3fs-fuse/src'
+make[1]: Leaving directory `/root/s3fs-fuse/src'
+Making install in test
+make[1]: Entering directory `/root/s3fs-fuse/test'
+make[2]: Entering directory `/root/s3fs-fuse/test'
+make[2]: Nothing to be done for `install-exec-am'.
+make[2]: Nothing to be done for `install-data-am'.
+make[2]: Leaving directory `/root/s3fs-fuse/test'
+make[1]: Leaving directory `/root/s3fs-fuse/test'
+Making install in doc
+make[1]: Entering directory `/root/s3fs-fuse/doc'
+make[2]: Entering directory `/root/s3fs-fuse/doc'
+make[2]: Nothing to be done for `install-exec-am'.
+ /usr/bin/mkdir -p '/usr/share/man/man1'
+ /usr/bin/install -c -m 644 man/s3fs.1 '/usr/share/man/man1'
+make[2]: Leaving directory `/root/s3fs-fuse/doc'
+make[1]: Leaving directory `/root/s3fs-fuse/doc'
+make[1]: Entering directory `/root/s3fs-fuse'
+make[2]: Entering directory `/root/s3fs-fuse'
+make[2]: Nothing to be done for `install-exec-am'.
+make[2]: Nothing to be done for `install-data-am'.
+make[2]: Leaving directory `/root/s3fs-fuse'
+make[1]: Leaving directory `/root/s3fs-fuse'
+[root@ip-172-31-18-254 s3fs-fuse]# which s3fs
+/usr/bin/s3fs
+[root@ip-172-31-18-254 s3fs-fuse]# mkdir /demo
+mkdir: cannot create directory ‘/demo’: File exists
+[root@ip-172-31-18-254 s3fs-fuse]#
+[root@ip-172-31-18-254 s3fs-fuse]# s3fs radha-1983 /demo
+s3fs: could not determine how to establish security credentials.
+[root@ip-172-31-18-254 s3fs-fuse]# s3fs radha-1983 -o use_cache=tmp -o allow_other -o uid=1001 -o mp_umask=002 /demo
+s3fs: could not determine how to establish security credentials.
+[root@ip-172-31-18-254 s3fs-fuse]#
+[root@ip-172-31-18-254 s3fs-fuse]# s3fs radha-1983 -o use_cache=tmp -o allow_other -o uid=1001 -o mp_umask=002 multireq_max=5 /demo
+s3fs: unable to access MOUNTPOINT multireq_max=5: No such file or directory
+[root@ip-172-31-18-254 s3fs-fuse]#
+[root@ip-172-31-18-254 s3fs-fuse]#
+[root@ip-172-31-18-254 s3fs-fuse]#
+[root@ip-172-31-18-254 s3fs-fuse]#
+[root@ip-172-31-18-254 s3fs-fuse]# cd /etc
+[root@ip-172-31-18-254 etc]# vi passwd-s3fs
+[root@ip-172-31-18-254 etc]#
+[root@ip-172-31-18-254 etc]#
+[root@ip-172-31-18-254 etc]# chmod 640 passwd-
+passwd-      passwd-s3fs
+[root@ip-172-31-18-254 etc]# chmod 640 passwd-s3fs
+[root@ip-172-31-18-254 etc]#
+[root@ip-172-31-18-254 etc]# cd
+[root@ip-172-31-18-254 ~]#
+[root@ip-172-31-18-254 ~]# s3fs radha-1983 -o use_cache=tmp -o allow_other -o uid=1001 -o mp_umask=002 multireq_max=5 /demo
+s3fs: unable to access MOUNTPOINT multireq_max=5: No such file or directory
+[root@ip-172-31-18-254 ~]#
+[root@ip-172-31-18-254 ~]# s3fs radha-1983 -o use_cache=/tmp -o allow_other -o uid=1001 -o mp_umask=002 multireq_max=5 /demp
+s3fs: unable to access MOUNTPOINT multireq_max=5: No such file or directory
+[root@ip-172-31-18-254 ~]#
+[root@ip-172-31-18-254 ~]# s3fs radha-1983 -o use_cache=/tmp -o allow_other -o uid=1001 -o mp_umask=002 multireq_max=5 /demo
+s3fs: unable to access MOUNTPOINT multireq_max=5: No such file or directory
+[root@ip-172-31-18-254 ~]#
+[root@ip-172-31-18-254 ~]# which s3fs
+/usr/bin/s3fs
+[root@ip-172-31-18-254 ~]# /usr/bin/s3fs babu -o use_cache=/tmp -o allow_other -o multireq_max=5 /demo
+[root@ip-172-31-18-254 ~]#
+[root@ip-172-31-18-254 ~]# df -h
+Filesystem      Size  Used Avail Use% Mounted on
+devtmpfs        477M     0  477M   0% /dev
+tmpfs           494M     0  494M   0% /dev/shm
+tmpfs           494M  356K  494M   1% /run
+tmpfs           494M     0  494M   0% /sys/fs/cgroup
+/dev/xvda1      8.0G  1.5G  6.6G  18% /
+tmpfs            99M     0   99M   0% /run/user/1000
+[root@ip-172-31-18-254 ~]#
+[root@ip-172-31-18-254 ~]#
+[root@ip-172-31-18-254 ~]# /usr/bin/s3fs radha-1987  -o use_cache=/tmp -o allow_other -o multireq_max=5 /dem0
+s3fs: unable to access MOUNTPOINT /dem0: No such file or directory
+[root@ip-172-31-18-254 ~]# /usr/bin/s3fs radha-1987  -o use_cache=/tmp -o allow_other -o multireq_max=5 /demo
+[root@ip-172-31-18-254 ~]# df -h
+Filesystem      Size  Used Avail Use% Mounted on
+devtmpfs        477M     0  477M   0% /dev
+tmpfs           494M     0  494M   0% /dev/shm
+tmpfs           494M  356K  494M   1% /run
+tmpfs           494M     0  494M   0% /sys/fs/cgroup
+/dev/xvda1      8.0G  1.5G  6.6G  18% /
+tmpfs            99M     0   99M   0% /run/user/1000
+s3fs            256T     0  256T   0% /demo
+[root@ip-172-31-18-254 ~]#
+[root@ip-172-31-18-254 ~]#
+[root@ip-172-31-18-254 ~]#
+[root@ip-172-31-18-254 ~]# cd /demo
+[root@ip-172-31-18-254 demo]# ls
+images
+[root@ip-172-31-18-254 demo]# cat images
+cat: images: Is a directory
+[root@ip-172-31-18-254 demo]#
+[root@ip-172-31-18-254 demo]# cd images
+[root@ip-172-31-18-254 images]# ls
+New Text Document.txt
+[root@ip-172-31-18-254 images]# cat new
+cat: new: No such file or directory
+[root@ip-172-31-18-254 images]# cat New\ Text\ Document.txt
+hi this is raju i am going to school everyday[root@ip-172-31-18-254 images]#
+[root@ip-172-31-18-254 images]#
+[root@ip-172-31-18-254 images]#
+[root@ip-172-31-18-254 images]#
+[root@ip-172-31-18-254 images]# pwd
+/demo/images
+[root@ip-172-31-18-254 images]#
+[root@ip-172-31-18-254 images]#
+[root@ip-172-31-18-254 images]#
+[root@ip-172-31-18-254 images]# echo "i am going to college" >raju2
+[root@ip-172-31-18-254 images]#
+[root@ip-172-31-18-254 images]# ls -ltr
+total 1
+---------- 1 root root 45 Jul 10 03:54 New Text Document.txt
+-rw-r--r-- 1 root root 22 Jul 10 05:26 raju2
+[root@ip-172-31-18-254 images]# /usr/bin/s3fs radha-1987  -o use_cache=/tmp -o allow_other -o multireq_max=5 /demo
+s3fs: MOUNTPOINT directory /demo is not empty. if you are sure this is safe, can use the 'nonempty' mount option.
+[root@ip-172-31-18-254 images]#
+[root@ip-172-31-18-254 images]#
+[root@ip-172-31-18-254 images]# pwd
+/demo/images
+[root@ip-172-31-18-254 images]# cd
+[root@ip-172-31-18-254 ~]#
+[root@ip-172-31-18-254 ~]#
+[root@ip-172-31-18-254 ~]# df -h
+Filesystem      Size  Used Avail Use% Mounted on
+devtmpfs        477M     0  477M   0% /dev
+tmpfs           494M     0  494M   0% /dev/shm
+tmpfs           494M  356K  494M   1% /run
+tmpfs           494M     0  494M   0% /sys/fs/cgroup
+/dev/xvda1      8.0G  1.5G  6.6G  18% /
+tmpfs            99M     0   99M   0% /run/user/1000
+s3fs            256T     0  256T   0% /demo
+[root@ip-172-31-18-254 ~]#
+[root@ip-172-31-18-254 ~]#
+[root@ip-172-31-18-254 ~]# umount /demo
+[root@ip-172-31-18-254 ~]#
+[root@ip-172-31-18-254 ~]# df -h
+Filesystem      Size  Used Avail Use% Mounted on
+devtmpfs        477M     0  477M   0% /dev
+tmpfs           494M     0  494M   0% /dev/shm
+tmpfs           494M  356K  494M   1% /run
+tmpfs           494M     0  494M   0% /sys/fs/cgroup
+/dev/xvda1      8.0G  1.5G  6.6G  18% /
+tmpfs            99M     0   99M   0% /run/user/1000
+[root@ip-172-31-18-254 ~]#
+[root@ip-172-31-18-254 ~]# /usr/bin/s3fs radha-1987  -o use_cache=/tmp -o allow_other -o multireq_max=5 /demo
+[root@ip-172-31-18-254 ~]# df -h
+Filesystem      Size  Used Avail Use% Mounted on
+devtmpfs        477M     0  477M   0% /dev
+tmpfs           494M     0  494M   0% /dev/shm
+tmpfs           494M  356K  494M   1% /run
+tmpfs           494M     0  494M   0% /sys/fs/cgroup
+/dev/xvda1      8.0G  1.5G  6.6G  18% /
+tmpfs            99M     0   99M   0% /run/user/1000
+s3fs            256T     0  256T   0% /demo
+[root@ip-172-31-18-254 ~]#
+[root@ip-172-31-18-254 ~]#
+[root@ip-172-31-18-254 ~]#
+[root@ip-172-31-18-254 ~]#
+[root@ip-172-31-18-254 ~]#
+[root@ip-172-31-18-254 ~]#
+[root@ip-172-31-18-254 ~]#
+[root@ip-172-31-18-254 ~]#
+[root@ip-172-31-18-254 ~]#
+[root@ip-172-31-18-254 ~]#
+[root@ip-172-31-18-254 ~]# df -h
+Filesystem      Size  Used Avail Use% Mounted on
+devtmpfs        477M     0  477M   0% /dev
+tmpfs           494M     0  494M   0% /dev/shm
+tmpfs           494M  356K  494M   1% /run
+tmpfs           494M     0  494M   0% /sys/fs/cgroup
+/dev/xvda1      8.0G  1.5G  6.6G  18% /
+tmpfs            99M     0   99M   0% /run/user/1000
+s3fs            256T     0  256T   0% /demo
+[root@ip-172-31-18-254 ~]#
+[root@ip-172-31-18-254 ~]#
+[root@ip-172-31-18-254 ~]#
+[root@ip-172-31-18-254 ~]#
+[root@ip-172-31-18-254 ~]#
+[root@ip-172-31-18-254 ~]#
+[root@ip-172-31-18-254 ~]# pwd
+/root
+[root@ip-172-31-18-254 ~]# echo "i am going ot office" >radha
+[root@ip-172-31-18-254 ~]#
+[root@ip-172-31-18-254 ~]# ls -ltr
+total 8
+drwxr-xr-x 8 root root 4096 Jul 10 04:42 s3fs-fuse
+-rw-r--r-- 1 root root   21 Jul 10 06:03 radha
+[root@ip-172-31-18-254 ~]#
+[root@ip-172-31-18-254 ~]#
+[root@ip-172-31-18-254 ~]# mv radha /demo/images/
+[root@ip-172-31-18-254 ~]#
+[root@ip-172-31-18-254 ~]# ls -ltr
+total 4
+drwxr-xr-x 8 root root 4096 Jul 10 04:42 s3fs-fuse
+[root@ip-172-31-18-254 ~]# ls -ltr /demo/images
+total 2
+---------- 1 root root 45 Jul 10 03:54 New Text Document.txt
+-rw-r--r-- 1 root root 22 Jul 10 05:26 raju2
+-rw-r--r-- 1 root root 21 Jul 10 06:03 radha
+[root@ip-172-31-18-254 ~]#
+[root@ip-172-31-18-254 ~]#
+[root@ip-172-31-18-254 ~]# ls -ltr
+total 4
+drwxr-xr-x 8 root root 4096 Jul 10 04:42 s3fs-fuse
+[root@ip-172-31-18-254 ~]#
+[root@ip-172-31-18-254 ~]#
+[root@ip-172-31-18-254 ~]# df -h
+Filesystem      Size  Used Avail Use% Mounted on
+devtmpfs        477M     0  477M   0% /dev
+tmpfs           494M     0  494M   0% /dev/shm
+tmpfs           494M  356K  494M   1% /run
+tmpfs           494M     0  494M   0% /sys/fs/cgroup
+/dev/xvda1      8.0G  1.5G  6.6G  18% /
+tmpfs            99M     0   99M   0% /run/user/1000
+s3fs            256T     0  256T   0% /demo
+[root@ip-172-31-18-254 ~]#
+[root@ip-172-31-18-254 ~]#
+[root@ip-172-31-18-254 ~]# cd /demo
+[root@ip-172-31-18-254 demo]# ls
+images
+[root@ip-172-31-18-254 demo]# cd images
+[root@ip-172-31-18-254 images]# ls
+New Text Document.txt  radha  raju2
+[root@ip-172-31-18-254 images]# cat radha
+i am going ot office
+[root@ip-172-31-18-254 images]#
+[root@ip-172-31-18-254 images]# cat raju2
+i am going to college
+[root@ip-172-31-18-254 images]#
+[root@ip-172-31-18-254 images]#
+[root@ip-172-31-18-254 images]#
+[root@ip-172-31-18-254 images]#
+[root@ip-172-31-18-254 images]# cd
+[root@ip-172-31-18-254 ~]#
+[root@ip-172-31-18-254 ~]#
+[root@ip-172-31-18-254 ~]# cd /demo/images
+[root@ip-172-31-18-254 images]# ls
+New Text Document.txt  radha  raju2
+[root@ip-172-31-18-254 images]# vi naveen.txt
+[root@ip-172-31-18-254 images]#
+[root@ip-172-31-18-254 images]# ls -ltr
+total 2
+---------- 1 root root 45 Jul 10 03:54 New Text Document.txt
+-rw-r--r-- 1 root root 22 Jul 10 05:26 raju2
+-rw-r--r-- 1 root root 21 Jul 10 06:03 radha
+-rw-r--r-- 1 root root 24 Jul 10 06:12 naveen.txt
+[root@ip-172-31-18-254 images]#
+[root@ip-172-31-18-254 images]# chmod naveen.txt
+chmod: missing operand after ‘naveen.txt’
+Try 'chmod --help' for more information.
+[root@ip-172-31-18-254 images]# chmod 000 naveen.txt
+[root@ip-172-31-18-254 images]#
+[root@ip-172-31-18-254 images]# ls -ltr
+total 2
+---------- 1 root root 45 Jul 10 03:54 New Text Document.txt
+-rw-r--r-- 1 root root 22 Jul 10 05:26 raju2
+-rw-r--r-- 1 root root 21 Jul 10 06:03 radha
+---------- 1 root root 24 Jul 10 06:12 naveen.txt
+[root@ip-172-31-18-254 images]#
+[root@ip-172-31-18-254 images]#
+[root@ip-172-31-18-254 images]#
+[root@ip-172-31-18-254 images]#
+[root@ip-172-31-18-254 images]# cd
+[root@ip-172-31-18-254 ~]#
+[root@ip-172-31-18-254 ~]# df -h
+Filesystem      Size  Used Avail Use% Mounted on
+devtmpfs        477M     0  477M   0% /dev
+tmpfs           494M     0  494M   0% /dev/shm
+tmpfs           494M  356K  494M   1% /run
+tmpfs           494M     0  494M   0% /sys/fs/cgroup
+/dev/xvda1      8.0G  1.5G  6.6G  18% /
+tmpfs            99M     0   99M   0% /run/user/1000
+s3fs            256T     0  256T   0% /demo
+[root@ip-172-31-18-254 ~]#
+[root@ip-172-31-18-254 ~]#
+[root@ip-172-31-18-254 ~]# aws --help
+usage: aws [options] <command> <subcommand> [<subcommand> ...] [parameters]
+To see help text, you can run:
+
+  aws help
+  aws <command> help
+  aws <command> <subcommand> help
+aws: error: too few arguments
+[root@ip-172-31-18-254 ~]#
+[root@ip-172-31-18-254 ~]#
+[root@ip-172-31-18-254 ~]# aws configure
+AWS Access Key ID [None]: AKIAJRACPAFNDIG3EVIA
+AWS Secret Access Key [None]: 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
+Default region name [None]: ap-south-1
+Default output format [None]: jason
+[root@ip-172-31-18-254 ~]#
+[root@ip-172-31-18-254 ~]#
+[root@ip-172-31-18-254 ~]#
+[root@ip-172-31-18-254 ~]# aws s3 cp s3://radha-1987/images/New+Text+Document.txt /var/tmp
+fatal error: An error occurred (404) when calling the HeadObject operation: Key "images/New+Text+Document.txt" does not exist
+[root@ip-172-31-18-254 ~]# aws s3 cp s3://radha-1987/images/New+Text+Document.txt /var/tmp/
+fatal error: An error occurred (404) when calling the HeadObject operation: Key "images/New+Text+Document.txt" does not exist
+[root@ip-172-31-18-254 ~]# aws s3 cp s3://radha-1987/images/* /var/tmp/
+fatal error: An error occurred (404) when calling the HeadObject operation: Key "images/*" does not exist
+[root@ip-172-31-18-254 ~]# aws s3 cp s3://radha-1987/images/ * /var/tmp/ *
+
+Unknown options: /var/tmp/,s3fs-fuse
+[root@ip-172-31-18-254 ~]#
+[root@ip-172-31-18-254 ~]#
+[root@ip-172-31-18-254 ~]#
+[root@ip-172-31-18-254 ~]# df -h
+Filesystem      Size  Used Avail Use% Mounted on
+devtmpfs        477M     0  477M   0% /dev
+tmpfs           494M     0  494M   0% /dev/shm
+tmpfs           494M  356K  494M   1% /run
+tmpfs           494M     0  494M   0% /sys/fs/cgroup
+/dev/xvda1      8.0G  1.5G  6.6G  18% /
+tmpfs            99M     0   99M   0% /run/user/1000
+s3fs            256T     0  256T   0% /demo
+[root@ip-172-31-18-254 ~]#
+[root@ip-172-31-18-254 ~]#
+[root@ip-172-31-18-254 ~]#
+[root@ip-172-31-18-254 ~]#
+[root@ip-172-31-18-254 ~]# ls -ltr
+total 4
+drwxr-xr-x 8 root root 4096 Jul 10 04:42 s3fs-fuse
+[root@ip-172-31-18-254 ~]#
+[root@ip-172-31-18-254 ~]#
+[root@ip-172-31-18-254 ~]# cd /demo
+[root@ip-172-31-18-254 demo]# ls
+images
+[root@ip-172-31-18-254 demo]# cd images
+[root@ip-172-31-18-254 images]#
+[root@ip-172-31-18-254 images]#
+[root@ip-172-31-18-254 images]# cd
+[root@ip-172-31-18-254 ~]#
+[root@ip-172-31-18-254 ~]#
+[root@ip-172-31-18-254 ~]# ls -ltr
+total 4
+drwxr-xr-x 8 root root 4096 Jul 10 04:42 s3fs-fuse
+[root@ip-172-31-18-254 ~]#
+[root@ip-172-31-18-254 ~]#
+[root@ip-172-31-18-254 ~]# echo "hello" > ram
+[root@ip-172-31-18-254 ~]#
+[root@ip-172-31-18-254 ~]# ls -ltr
+total 8
+drwxr-xr-x 8 root root 4096 Jul 10 04:42 s3fs-fuse
+-rw-r--r-- 1 root root    6 Jul 10 07:52 ram
+[root@ip-172-31-18-254 ~]#
+[root@ip-172-31-18-254 ~]#
+[root@ip-172-31-18-254 ~]# aws configure
+AWS Access Key ID [****************EVIA]: ^C
+[root@ip-172-31-18-254 ~]#
+[root@ip-172-31-18-254 ~]#
+[root@ip-172-31-18-254 ~]#
+[root@ip-172-31-18-254 ~]# aws s3 ram s3://radha-1987/images
+usage: aws [options] <command> <subcommand> [<subcommand> ...] [parameters]
+To see help text, you can run:
+
+  aws help
+  aws <command> help
+  aws <command> <subcommand> help
+aws: error: argument subcommand: Invalid choice, valid choices are:
+
+ls                                       | website
+cp                                       | mv
+rm                                       | sync
+mb                                       | rb
+presign
+
+
+Invalid choice: 'ram', maybe you meant:
+
+  * rm
+[root@ip-172-31-18-254 ~]# aws s3 ram s3://radha-1987/images/
+usage: aws [options] <command> <subcommand> [<subcommand> ...] [parameters]
+To see help text, you can run:
+
+  aws help
+  aws <command> help
+  aws <command> <subcommand> help
+aws: error: argument subcommand: Invalid choice, valid choices are:
+
+ls                                       | website
+cp                                       | mv
+rm                                       | sync
+mb                                       | rb
+presign
+
+
+Invalid choice: 'ram', maybe you meant:
+
+  * rm
+[root@ip-172-31-18-254 ~]# ls
+ram  s3fs-fuse
+[root@ip-172-31-18-254 ~]# aws s3 /ram s3://radha-1987/images/
+usage: aws [options] <command> <subcommand> [<subcommand> ...] [parameters]
+To see help text, you can run:
+
+  aws help
+  aws <command> help
+  aws <command> <subcommand> help
+aws: error: argument subcommand: Invalid choice, valid choices are:
+
+ls                                       | website
+cp                                       | mv
+rm                                       | sync
+mb                                       | rb
+presign
+[root@ip-172-31-18-254 ~]# aws s3 sync /ram s3://radha-1987/images/
+
+The user-provided path /ram does not exist.
+[root@ip-172-31-18-254 ~]# aws s3 sync ram s3://radha-1987/images/
+warning: Skipping file /root/ram/. File does not exist.
+
+[root@ip-172-31-18-254 ~]# pwd
+/root
+[root@ip-172-31-18-254 ~]# aws s3 sync /root/ram s3://radha-1987/images/
+warning: Skipping file /root/ram/. File does not exist.
+
+[root@ip-172-31-18-254 ~]# aws s3 cp /root/ram s3://radha-1987/images/
+upload: ./ram to s3://radha-1987/images/ram
+[root@ip-172-31-18-254 ~]#
+[root@ip-172-31-18-254 ~]#
+[root@ip-172-31-18-254 ~]#
+[root@ip-172-31-18-254 ~]#
+[root@ip-172-31-18-254 ~]#
+[root@ip-172-31-18-254 ~]#
+[root@ip-172-31-18-254 ~]#
+[root@ip-172-31-18-254 ~]#
+[root@ip-172-31-18-254 ~]#
+[root@ip-172-31-18-254 ~]#
+[root@ip-172-31-18-254 ~]#
+[root@ip-172-31-18-254 ~]#
+[root@ip-172-31-18-254 ~]#
+[root@ip-172-31-18-254 ~]#
+[root@ip-172-31-18-254 ~]#
+[root@ip-172-31-18-254 ~]#
+[root@ip-172-31-18-254 ~]#
+[root@ip-172-31-18-254 ~]#
+[root@ip-172-31-18-254 ~]# pwd
+/root
+[root@ip-172-31-18-254 ~]#
+[root@ip-172-31-18-254 ~]#
+[root@ip-172-31-18-254 ~]# aws s3 rm s3://radha-1987/images/ram
+delete: s3://radha-1987/images/ram
+[root@ip-172-31-18-254 ~]#
+[root@ip-172-31-18-254 ~]#
+[root@ip-172-31-18-254 ~]#
+[root@ip-172-31-18-254 ~]# aws s3 mv s3://radha-1987/images/radha s3://radha-1987/images/radha-01
+move: s3://radha-1987/images/radha to s3://radha-1987/images/radha-01
+[root@ip-172-31-18-254 ~]#
+[root@ip-172-31-18-254 ~]#
+[root@ip-172-31-18-254 ~]#
+[root@ip-172-31-18-254 ~]#
+[root@ip-172-31-18-254 ~]#
+[root@ip-172-31-18-254 ~]#
+[root@ip-172-31-18-254 ~]#
+[root@ip-172-31-18-254 ~]# ls -ltr
+total 8
+drwxr-xr-x 8 root root 4096 Jul 10 04:42 s3fs-fuse
+-rw-r--r-- 1 root root    6 Jul 10 07:52 ram
+[root@ip-172-31-18-254 ~]#
+[root@ip-172-31-18-254 ~]#
+[root@ip-172-31-18-254 ~]#
+[root@ip-172-31-18-254 ~]#
+[root@ip-172-31-18-254 ~]#
+[root@ip-172-31-18-254 ~]# pwd
+/root
+[root@ip-172-31-18-254 ~]# df -h
+Filesystem      Size  Used Avail Use% Mounted on
+devtmpfs        477M     0  477M   0% /dev
+tmpfs           494M     0  494M   0% /dev/shm
+tmpfs           494M  356K  494M   1% /run
+tmpfs           494M     0  494M   0% /sys/fs/cgroup
+/dev/xvda1      8.0G  1.5G  6.6G  18% /
+tmpfs            99M     0   99M   0% /run/user/1000
+s3fs            256T     0  256T   0% /demo
+[root@ip-172-31-18-254 ~]#
+[root@ip-172-31-18-254 ~]#
+[root@ip-172-31-18-254 ~]#
+[root@ip-172-31-18-254 ~]# umount /demo
+[root@ip-172-31-18-254 ~]#
+[root@ip-172-31-18-254 ~]#
+[root@ip-172-31-18-254 ~]#
+[root@ip-172-31-18-254 ~]#
+[root@ip-172-31-18-254 ~]#
+[root@ip-172-31-18-254 ~]# df -h
+Filesystem      Size  Used Avail Use% Mounted on
+devtmpfs        477M     0  477M   0% /dev
+tmpfs           494M     0  494M   0% /dev/shm
+tmpfs           494M  356K  494M   1% /run
+tmpfs           494M     0  494M   0% /sys/fs/cgroup
+/dev/xvda1      8.0G  1.5G  6.6G  18% /
+tmpfs            99M     0   99M   0% /run/user/1000
+[root@ip-172-31-18-254 ~]#
+[root@ip-172-31-18-254 ~]#
+[root@ip-172-31-18-254 ~]#
+[root@ip-172-31-18-254 ~]#
+[root@ip-172-31-18-254 ~]#
+[root@ip-172-31-18-254 ~]#
+[root@ip-172-31-18-254 ~]#
+[root@ip-172-31-18-254 ~]#
+[root@ip-172-31-18-254 ~]#
+[root@ip-172-31-18-254 ~]#
+[root@ip-172-31-18-254 ~]#
+[root@ip-172-31-18-254 ~]# df -h
+Filesystem      Size  Used Avail Use% Mounted on
+devtmpfs        477M     0  477M   0% /dev
+tmpfs           494M     0  494M   0% /dev/shm
+tmpfs           494M  356K  494M   1% /run
+tmpfs           494M     0  494M   0% /sys/fs/cgroup
+/dev/xvda1      8.0G  1.5G  6.6G  18% /
+tmpfs            99M     0   99M   0% /run/user/1000
+[root@ip-172-31-18-254 ~]#
+[root@ip-172-31-18-254 ~]#
+[root@ip-172-31-18-254 ~]#
+[root@ip-172-31-18-254 ~]#
+[root@ip-172-31-18-254 ~]#
+[root@ip-172-31-18-254 ~]#
+[root@ip-172-31-18-254 ~]#
+[root@ip-172-31-18-254 ~]#
+[root@ip-172-31-18-254 ~]#
+[root@ip-172-31-18-254 ~]#
+[root@ip-172-31-18-254 ~]#
+[root@ip-172-31-18-254 ~]#
+[root@ip-172-31-18-254 ~]#
+[root@ip-172-31-18-254 ~]#
+[root@ip-172-31-18-254 ~]#
+[root@ip-172-31-18-254 ~]#
+[root@ip-172-31-18-254 ~]#
+[root@ip-172-31-18-254 ~]#
+[root@ip-172-31-18-254 ~]#
+[root@ip-172-31-18-254 ~]# which s3fs
+/usr/bin/s3fs
+[root@ip-172-31-18-254 ~]#
+[root@ip-172-31-18-254 ~]#
+[root@ip-172-31-18-254 ~]# /usr/bin/s3fs radha-1987 -o use-cache=/tmp -o allow-other -o multireq_max=5 /demo
+fuse: unknown option `use-cache=/tmp'
+[root@ip-172-31-18-254 ~]#
+[root@ip-172-31-18-254 ~]# /usr/bin/s3fs radha-1987 -o use_cache=/tmp -o allow-other -o multireq_max=5 /demo
+fuse: unknown option `allow-other'
+[root@ip-172-31-18-254 ~]# /usr/bin/s3fs radha-1987  -o use_cache=/tmp -o allow_other -o multireq_max=5 /demo
+[root@ip-172-31-18-254 ~]#
+[root@ip-172-31-18-254 ~]#
+[root@ip-172-31-18-254 ~]#
+[root@ip-172-31-18-254 ~]# df -h
+Filesystem      Size  Used Avail Use% Mounted on
+devtmpfs        477M     0  477M   0% /dev
+tmpfs           494M     0  494M   0% /dev/shm
+tmpfs           494M  356K  494M   1% /run
+tmpfs           494M     0  494M   0% /sys/fs/cgroup
+/dev/xvda1      8.0G  1.5G  6.6G  18% /
+tmpfs            99M     0   99M   0% /run/user/1000
+s3fs            256T     0  256T   0% /demo
+[root@ip-172-31-18-254 ~]# cd /demo
+[root@ip-172-31-18-254 demo]# ls
+raju
+[root@ip-172-31-18-254 demo]# cd raju
+[root@ip-172-31-18-254 raju]# ls
+New Text Document.txt
+[root@ip-172-31-18-254 raju]# cat New Text Document.txt
+cat: New: No such file or directory
+cat: Text: No such file or directory
+cat: Document.txt: No such file or directory
+[root@ip-172-31-18-254 raju]#
+[root@ip-172-31-18-254 raju]#
+[root@ip-172-31-18-254 raju]# vi New Text Document.txt
+3 files to edit
+[root@ip-172-31-18-254 raju]#
+[root@ip-172-31-18-254 raju]#
+[root@ip-172-31-18-254 raju]#
+[root@ip-172-31-18-254 raju]# pwd
+/demo/raju
+[root@ip-172-31-18-254 raju]# cd
+[root@ip-172-31-18-254 ~]#
+[root@ip-172-31-18-254 ~]#
+[root@ip-172-31-18-254 ~]# df -h
+Filesystem      Size  Used Avail Use% Mounted on
+devtmpfs        477M     0  477M   0% /dev
+tmpfs           494M     0  494M   0% /dev/shm
+tmpfs           494M  356K  494M   1% /run
+tmpfs           494M     0  494M   0% /sys/fs/cgroup
+/dev/xvda1      8.0G  1.5G  6.6G  18% /
+tmpfs            99M     0   99M   0% /run/user/1000
+s3fs            256T     0  256T   0% /demo
+[root@ip-172-31-18-254 ~]#
+[root@ip-172-31-18-254 ~]#
+[root@ip-172-31-18-254 ~]# cd /demo
+[root@ip-172-31-18-254 demo]# ls
+raju
+[root@ip-172-31-18-254 demo]# cd raju
+[root@ip-172-31-18-254 raju]# ls
+New Text Document.txt
+[root@ip-172-31-18-254 raju]# echo "hai how are you" > srinu
+[root@ip-172-31-18-254 raju]# ls -ltr
+total 1
+---------- 1 root root 45 Jul 10 13:52 New Text Document.txt
+-rw-r--r-- 1 root root 16 Jul 10 14:01 srinu
+[root@ip-172-31-18-254 raju]#
+[root@ip-172-31-18-254 raju]#
+[root@ip-172-31-18-254 raju]#
+[root@ip-172-31-18-254 raju]# cd
+[root@ip-172-31-18-254 ~]#
+[root@ip-172-31-18-254 ~]#
+[root@ip-172-31-18-254 ~]# aws s3 ls
+2018-07-10 06:20:32 radha-1987
+[root@ip-172-31-18-254 ~]#
+[root@ip-172-31-18-254 ~]#
+[root@ip-172-31-18-254 ~]#
+[root@ip-172-31-18-254 ~]#
+[root@ip-172-31-18-254 ~]# history
+    1  df -h
+    2  clear
+    3  df -h
+    4  yum update all
+    5  mkdir /demo
+    6  s3fs radha-1987 /demo
+    7  yum install s3fs
+    8  yum update
+    9  yum install automake fuse fuse-devel gcc-c++ git libcurl-devel libxml2-devel make openssl-devel -y
+   10  git clone https://github.com/s3fs-fuse/s3fs-fuse.git
+   11  cd s3fs-fuse/
+   12  ls
+   13  ./autogen.sh
+   14  ./configure prefix-/usr --with openssl
+   15  ./configure prefix-/usr --with-openssl
+   16  ./configure prefix=/usr --with-openssl
+   17  make
+   18  make install
+   19  which s3fs
+   20  mkdir /demo
+   21  s3fs radha-1983 /demo
+   22  s3fs radha-1983 -o use_cache=tmp -o allow_other -o uid=1001 -o mp_umask=002 /demo
+   23  s3fs radha-1983 -o use_cache=tmp -o allow_other -o uid=1001 -o mp_umask=002 multireq_max=5 /demo
+   24  cd /etc
+   25  vi passwd-s3fs
+   26  chmod 640 passwd-s3fs
+   27  cd
+   28  s3fs radha-1983 -o use_cache=tmp -o allow_other -o uid=1001 -o mp_umask=002 multireq_max=5 /demo
+   29  s3fs radha-1983 -o use_cache=/tmp -o allow_other -o uid=1001 -o mp_umask=002 multireq_max=5 /demp
+   30  s3fs radha-1983 -o use_cache=/tmp -o allow_other -o uid=1001 -o mp_umask=002 multireq_max=5 /demo
+   31  which s3fs
+   32  /usr/bin/s3fs babu -o use_cache=/tmp -o allow_other -o multireq_max=5 /demo
+   33  df -h
+   34  /usr/bin/s3fs radha-1987  -o use_cache=/tmp -o allow_other -o multireq_max=5 /dem0
+   35  /usr/bin/s3fs radha-1987  -o use_cache=/tmp -o allow_other -o multireq_max=5 /demo
+   36  df -h
+   37  cd /demo
+   38  ls
+   39  cat images
+   40  cd images
+   41  ls
+   42  cat new
+   43  cat New\ Text\ Document.txt
+   44  pwd
+   45  echo "i am going to college" >raju2
+   46  ls -ltr
+   47  /usr/bin/s3fs radha-1987  -o use_cache=/tmp -o allow_other -o multireq_max=5 /demo
+   48  pwd
+   49  cd
+   50  df -h
+   51  umount /demo
+   52  df -h
+   53  /usr/bin/s3fs radha-1987  -o use_cache=/tmp -o allow_other -o multireq_max=5 /demo
+   54  df -h
+   55  pwd
+   56  echo "i am going ot office" >radha
+   57  ls -ltr
+   58  mv radha /demo/images/
+   59  ls -ltr
+   60  ls -ltr /demo/images
+   61  ls -ltr
+   62  df -h
+   63  cd /demo
+   64  ls
+   65  cd images
+   66  ls
+   67  cat radha
+   68  cat raju2
+   69  cd
+   70  cd /demo/images
+   71  ls
+   72  vi naveen.txt
+   73  ls -ltr
+   74  chmod naveen.txt
+   75  chmod 000 naveen.txt
+   76  ls -ltr
+   77  cd
+   78  df -h
+   79  aws --help
+   80  aws configure
+   81  aws s3 cp s3://radha-1987/images/New+Text+Document.txt /var/tmp
+   82  aws s3 cp s3://radha-1987/images/New+Text+Document.txt /var/tmp/
+   83  aws s3 cp s3://radha-1987/images/* /var/tmp/
+   84  aws s3 cp s3://radha-1987/images/ * /var/tmp/ *
+   85  df -h
+   86  ls -ltr
+   87  cd /demo
+   88  ls
+   89  cd images
+   90  cd
+   91  ls -ltr
+   92  echo "hello" > ram
+   93  ls -ltr
+   94  aws configure
+   95  aws s3 ram s3://radha-1987/images
+   96  aws s3 ram s3://radha-1987/images/
+   97  ls
+   98  aws s3 /ram s3://radha-1987/images/
+   99  aws s3 sync /ram s3://radha-1987/images/
+  100  aws s3 sync ram s3://radha-1987/images/
+  101  pwd
+  102  aws s3 sync /root/ram s3://radha-1987/images/
+  103  aws s3 cp /root/ram s3://radha-1987/images/
+  104  pwd
+  105  aws s3 rm s3://radha-1987/images/ram
+  106  aws s3 mv s3://radha-1987/images/radha s3://radha-1987/images/radha-01
+  107  ls -ltr
+  108  pwd
+  109  df -h
+  110  umount /demo
+  111  df -h
+  112  which s3fs
+  113  /usr/bin/s3fs radha-1987 -o use-cache=/tmp -o allow-other -o multireq_max=5 /demo
+  114  /usr/bin/s3fs radha-1987 -o use_cache=/tmp -o allow-other -o multireq_max=5 /demo
+  115  /usr/bin/s3fs radha-1987  -o use_cache=/tmp -o allow_other -o multireq_max=5 /demo
+  116  df -h
+  117  cd /demo
+  118  ls
+  119  cd raju
+  120  ls
+  121  cat New Text Document.txt
+  122  vi New Text Document.txt
+  123  pwd
+  124  cd
+  125  df -h
+  126  cd /demo
+  127  ls
+  128  cd raju
+  129  ls
+  130  echo "hai how are you" > srinu
+  131  ls -ltr
+  132  cd
+  133  aws s3 ls
+  134  history
+[root@ip-172-31-18-254 ~]#
+
+
+
+[root@ip-172-31-18-254 ~]# history
+    1  df -h
+    2  clear
+    3  df -h
+    4  yum update all
+    5  mkdir /demo
+    6  s3fs radha-1987 /demo
+    7  yum install s3fs
+    8  yum update
+    9  yum install automake fuse fuse-devel gcc-c++ git libcurl-devel libxml2-devel make openssl-devel -y
+   10  git clone https://github.com/s3fs-fuse/s3fs-fuse.git
+   11  cd s3fs-fuse/
+   12  ls
+   13  ./autogen.sh
+   14  ./configure prefix-/usr --with openssl
+   15  ./configure prefix-/usr --with-openssl
+   16  ./configure prefix=/usr --with-openssl
+   17  make
+   18  make install
+   19  which s3fs
+   20  mkdir /demo
+   21  s3fs radha-1983 /demo
+   22  s3fs radha-1983 -o use_cache=tmp -o allow_other -o uid=1001 -o mp_umask=002 /demo
+   23  s3fs radha-1983 -o use_cache=tmp -o allow_other -o uid=1001 -o mp_umask=002 multireq_max=5 /demo
+   24  cd /etc
+   25  vi passwd-s3fs
+   26  chmod 640 passwd-s3fs
+   27  cd
+   28  s3fs radha-1983 -o use_cache=tmp -o allow_other -o uid=1001 -o mp_umask=002 multireq_max=5 /demo
+   29  s3fs radha-1983 -o use_cache=/tmp -o allow_other -o uid=1001 -o mp_umask=002 multireq_max=5 /demp
+   30  s3fs radha-1983 -o use_cache=/tmp -o allow_other -o uid=1001 -o mp_umask=002 multireq_max=5 /demo
+   31  which s3fs
+   32  /usr/bin/s3fs babu -o use_cache=/tmp -o allow_other -o multireq_max=5 /demo
+   33  df -h
+   34  /usr/bin/s3fs radha-1987  -o use_cache=/tmp -o allow_other -o multireq_max=5 /dem0
+   35  /usr/bin/s3fs radha-1987  -o use_cache=/tmp -o allow_other -o multireq_max=5 /demo
+   36  df -h
+   37  cd /demo
+   38  ls
+   39  cat images
+   40  cd images
+   41  ls
+   42  cat new
+   43  cat New\ Text\ Document.txt
+   44  pwd
+   45  echo "i am going to college" >raju2
+   46  ls -ltr
+   47  /usr/bin/s3fs radha-1987  -o use_cache=/tmp -o allow_other -o multireq_max=5 /demo
+   48  pwd
+   49  cd
+   50  df -h
+   51  umount /demo
+   52  df -h
+   53  /usr/bin/s3fs radha-1987  -o use_cache=/tmp -o allow_other -o multireq_max=5 /demo
+   54  df -h
+   55  pwd
+   56  echo "i am going ot office" >radha
+   57  ls -ltr
+   58  mv radha /demo/images/
+   59  ls -ltr
+   60  ls -ltr /demo/images
+   61  ls -ltr
+   62  df -h
+   63  cd /demo
+   64  ls
+   65  cd images
+   66  ls
+   67  cat radha
+   68  cat raju2
+   69  cd
+   70  cd /demo/images
+   71  ls
+   72  vi naveen.txt
+   73  ls -ltr
+   74  chmod naveen.txt
+   75  chmod 000 naveen.txt
+   76  ls -ltr
+   77  cd
+   78  df -h
+   79  aws --help
+   80  aws configure
+   81  aws s3 cp s3://radha-1987/images/New+Text+Document.txt /var/tmp
+   82  aws s3 cp s3://radha-1987/images/New+Text+Document.txt /var/tmp/
+   83  aws s3 cp s3://radha-1987/images/* /var/tmp/
+   84  aws s3 cp s3://radha-1987/images/ * /var/tmp/ *
+   85  df -h
+   86  ls -ltr
+   87  cd /demo
+   88  ls
+   89  cd images
+   90  cd
+   91  ls -ltr
+   92  echo "hello" > ram
+   93  ls -ltr
+   94  aws configure
+   95  aws s3 ram s3://radha-1987/images
+   96  aws s3 ram s3://radha-1987/images/
+   97  ls
+   98  aws s3 /ram s3://radha-1987/images/
+   99  aws s3 sync /ram s3://radha-1987/images/
+  100  aws s3 sync ram s3://radha-1987/images/
+  101  pwd
+  102  aws s3 sync /root/ram s3://radha-1987/images/
+  103  aws s3 cp /root/ram s3://radha-1987/images/
+  104  pwd
+  105  aws s3 rm s3://radha-1987/images/ram
+  106  aws s3 mv s3://radha-1987/images/radha s3://radha-1987/images/radha-01
+  107  ls -ltr
+  108  pwd
+  109  df -h
+  110  umount /demo
+  111  df -h
+  112  which s3fs
+  113  /usr/bin/s3fs radha-1987 -o use-cache=/tmp -o allow-other -o multireq_max=5 /demo
+  114  /usr/bin/s3fs radha-1987 -o use_cache=/tmp -o allow-other -o multireq_max=5 /demo
+  115  /usr/bin/s3fs radha-1987  -o use_cache=/tmp -o allow_other -o multireq_max=5 /demo
+  116  df -h
+  117  cd /demo
+  118  ls
+  119  cd raju
+  120  ls
+  121  cat New Text Document.txt
+  122  vi New Text Document.txt
+  123  pwd
+  124  cd
+  125  df -h
+  126  cd /demo
+  127  ls
+  128  cd raju
+  129  ls
+  130  echo "hai how are you" > srinu
+  131  ls -ltr
+  132  cd
+  133  aws s3 ls
+  134  history
+[root@ip-172-31-18-254 ~]#
+
+
